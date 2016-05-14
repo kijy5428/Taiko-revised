@@ -1,6 +1,6 @@
 #include "mainwindow2.h"
 #include "ui_mainwindow2.h"
-#include "Qlabel"
+#include "QLabel"
 #include <QDebug>
 #include <drums.h>
 #include <smallblue.h>

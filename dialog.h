@@ -20,8 +20,6 @@ public slots:
     void reboot();
 
 private slots:
-    //void on_exitButton_clicked();
-
 private:
     Ui::Dialog *ui;
 };

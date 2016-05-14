@@ -1,5 +1,5 @@
 #include "smalldrums.h"
-#include <qDebug>
+#include <QDebug>
 
 
 int SmallDrums::xPosition =1020;

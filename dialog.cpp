@@ -13,20 +13,14 @@ Dialog::Dialog(QWidget *parent, int score) :
 
     qDebug() << score ;
 
-    //taikoFont *tf = new taikoFont;
-   // ui->exitButton->setFont(*(tf->fontType));
-
     QString finalScore = "Your Score is : "+QString::number(score);
     ui->finalScoreLabel->setText(finalScore);
-    ui->finalScoreLabel->setGeometry(50,60,690,150);
-   //ui->finalScoreLabel->setFont(*(tf->fontType));
+    ui->finalScoreLabel->setGeometry(50,60,690,150); 
 
     ui->exitButton->setGeometry(100,260,260,100);
-   // ui->exitButton->setFont(*(tf->fontType));
-
 
     ui->restartButton->setGeometry(420,260,260,100);
-    //ui->restartButton->setFont(*(tf->fontType));
+
 
     connect(ui->restartButton,SIGNAL(clicked(bool)),this,SLOT(reboot()));
 

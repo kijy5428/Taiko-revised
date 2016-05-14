@@ -8,8 +8,8 @@ class SmallDrums : public drums
 public:
     SmallDrums(QWidget *parent=0);
 
-    static int SmallDrums::xPosition ;
-    static int SmallDrums::yPosition ;
+    static int xPosition ;
+    static int yPosition ;
 
 
 public  slots:
