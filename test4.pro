@@ -5,11 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui    \
-            multimedia
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-QMAKE_LFLAGS_WINDOWS += -Wl,--stack,32000000
-QMAKE_LFLAGS += /STACK:32000000
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 
 TARGET = test4
@@ -17,8 +14,6 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    mainwindow2.cpp \
     drums.cpp \
     bigblue.cpp \
     bigred.cpp \
@@ -26,10 +21,11 @@ SOURCES += main.cpp\
     smallred.cpp \
     bigdrums.cpp \
     smalldrums.cpp \
-    dialog.cpp
+    gamewindow.cpp \
+    startwindow.cpp \
+    resultwindow.cpp
 
-HEADERS  += mainwindow.h \
-    mainwindow2.h \
+HEADERS  += \
     drums.h \
     bigblue.h \
     bigred.h \
@@ -37,15 +33,14 @@ HEADERS  += mainwindow.h \
     smallred.h \
     bigdrums.h \
     smalldrums.h \
-    dialog.h
+    gamewindow.h \
+    startwindow.h \
+    resultwindow.h
 
-FORMS    += mainwindow.ui \
-    mainwindow2.ui \
-    text.ui \
-    test.ui \
-    result.ui \
-    frame.ui \
-    dialog.ui
+FORMS    += \
+    resultwindow.ui \
+    startwindow.ui \
+    gamewindow.ui
 
 RESOURCES += \
     res.qrc

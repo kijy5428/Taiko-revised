@@ -8,7 +8,6 @@ int drums::score =0;
 QTimer * drums ::moveTimer = new QTimer;
 double drums:: moveDistance = 1;
 
-drums::drums(){}
 
 drums::drums(QWidget *parent){
 
@@ -24,12 +23,12 @@ drums::~drums(){}
 void drums:: moveDrums(){}
 
 
-void drums::keyPressEvent(QKeyEvent * e){
+void drums::keyPressEvent(){
 
     int x = this->x();
     int y = this->y();
 
-        this->move(QPoint (x +100,y));
+    this->move(QPoint (x +100,y));
 
 
 }

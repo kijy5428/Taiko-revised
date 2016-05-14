@@ -5,9 +5,6 @@
 int BigDrums::xPosition =1020;
 int BigDrums::yPosition =83;
 
-//int BigDrums::xPosition =1010;
-//int BigDrums::yPosition =83;
-
 
 BigDrums::BigDrums(QWidget *parent):drums(parent)
 {
@@ -26,7 +23,6 @@ void BigDrums::moveDrums(){
     int y = this->y();
 
     if(x < 10){
-
         delete this;
     }
 

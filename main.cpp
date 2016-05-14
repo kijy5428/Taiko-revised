@@ -1,9 +1,9 @@
 #include "drums.h"
-#include "mainwindow.h"
-#include "mainwindow2.h"
+#include "startwindow.h"
+#include "gamewindow.h"
 #include <QApplication>
 #include "QLabel"
-#include "dialog.h"
+#include "resultwindow.h"
 
 
 
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
 
-    MainWindow *w = new MainWindow();
+    StartWindow *w = new StartWindow();
     w->setFixedSize(width,height);
     w->show();
 
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 
     while(currentExitCode==10){
 
-      MainWindow2* w2 = new MainWindow2();
+      GameWindow* w2 = new GameWindow();
       w2->setFixedSize(width,height);
       w2->show();
 
@@ -38,16 +38,16 @@ int main(int argc, char *argv[])
             break;
       }
 
-      Dialog *d = new Dialog(0,score);
+      ResultWindow *d = new ResultWindow(0,score);
       d->setFixedSize(width,height);
-      delete w2;
       d->show();
-      a.exec();
-      currentExitCode =  d->result();
+
+      delete w2;
+      currentExitCode = a.exec();
 
       delete d;
 
-
      }
+
     return 0 ;
 }

@@ -10,6 +10,8 @@ public:
     BigBlue(QWidget * parent =0);
 
     static bool pressed ;
+
+public slots:
     void clear();
 
 };

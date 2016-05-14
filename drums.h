@@ -19,14 +19,15 @@ public:
     static double moveDistance;
     static int  score;
 
-    drums();
-    drums(QWidget *parent);
+    drums(QWidget *parent=0);
     ~drums();
-    void keyPressEvent(QKeyEvent * e);
+
 
 public slots:
+
     virtual void moveDrums();
     virtual  void clear();
+    void keyPressEvent();
 
 
 };
