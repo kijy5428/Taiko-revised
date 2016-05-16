@@ -11,7 +11,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <QCloseEvent>
-
+#include <bomb.h>
 
 
 
@@ -29,7 +29,7 @@ GameWindow::GameWindow(QWidget *parent) :
 
 
     drums::score = 0;
-
+    drums::moveTimer->start(5);
     ui->setupUi(this);
     QPixmap pix(":img/pics/bg.png");
     ui->l2->setPixmap(pix);
@@ -60,7 +60,7 @@ GameWindow::GameWindow(QWidget *parent) :
 
      srand(time(0));
      drumTimer = new QTimer();
-     drumTimer->start(100);
+     drumTimer->start(200);
      connect(drumTimer,SIGNAL(timeout()),this,SLOT(createDrums()));
 
 }
@@ -145,6 +145,24 @@ void GameWindow::keyPressEvent(QKeyEvent * e){
              SmallBlue::pressed = true;
 
         }
+
+        if(e->key()==Qt::Key_D){
+              //drums::moveTimer->stop();
+              drums::moveTimer->setInterval(30);
+
+        }
+
+        if(e->key()==Qt::Key_J){
+             drums::moveTimer->setInterval(1);
+
+        }
+
+        if(e->key()==Qt::Key_Space){
+
+             new Bomb(this);
+
+        }
+
 }
 
 
@@ -169,6 +187,9 @@ void GameWindow::keyReleaseEvent(QKeyEvent * e){
              SmallBlue::pressed = false;
 
         }
+
+
+
 
         ui->scoreLabel2->setText(QString::number(drums::score));
 

@@ -6,5 +6,6 @@
         <file>pics/4.png</file>
         <file>pics/bg.png</file>
         <file>pics/3.png</file>
+        <file>bomb.png</file>
     </qresource>
 </RCC>

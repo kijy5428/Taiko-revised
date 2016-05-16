@@ -23,7 +23,8 @@ SOURCES += main.cpp\
     smalldrums.cpp \
     gamewindow.cpp \
     startwindow.cpp \
-    resultwindow.cpp
+    resultwindow.cpp \
+    bomb.cpp
 
 HEADERS  += \
     drums.h \
@@ -35,7 +36,8 @@ HEADERS  += \
     smalldrums.h \
     gamewindow.h \
     startwindow.h \
-    resultwindow.h
+    resultwindow.h \
+    bomb.h
 
 FORMS    += \
     resultwindow.ui \
@@ -44,3 +46,6 @@ FORMS    += \
 
 RESOURCES += \
     res.qrc
+
+DISTFILES += \
+    bomb.png

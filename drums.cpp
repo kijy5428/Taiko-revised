@@ -9,11 +9,13 @@ QTimer * drums ::moveTimer = new QTimer;
 double drums:: moveDistance = 1;
 
 
+
 drums::drums(QWidget *parent){
 
     this->setParent(parent);
     this->raise();
     this->show();
+    //drums::moveTimer->start(5);
 
 }
 

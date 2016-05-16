@@ -9,7 +9,7 @@ int BigDrums::yPosition =83;
 BigDrums::BigDrums(QWidget *parent):drums(parent)
 {
 
-    drums::moveTimer->start(5);
+    //drums::moveTimer->start(5);
 
     this->setGeometry(xPosition , yPosition,100,200);
     connect(moveTimer,SIGNAL(timeout()),this,SLOT(moveDrums()));
